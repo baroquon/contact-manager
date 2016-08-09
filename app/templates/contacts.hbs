@@ -4,4 +4,18 @@
     <li>{{contact.firstName}} {{contact.lastName}}</li>
   {{/each}}
 </ul>
+
+{{#update-query-button sortValue="firstName" updateSort=(action 'updateSortBy')}}
+  Sort by First Name
+{{/update-query-button}}
+{{#update-query-button sortValue="lastName" updateSort=(action 'updateSortBy')}}
+  Sort by Last Name
+{{/update-query-button}}
+{{#update-query-button sortValue="email" updateSort=(action 'updateSortBy')}}
+  Sort by Email
+{{/update-query-button}}
+{{#update-query-button sortValue="null" updateSort=(action 'updateSortBy')}}
+  Clear Sort
+{{/update-query-button}}
+
 {{outlet}}
