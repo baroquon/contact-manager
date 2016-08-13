@@ -12,5 +12,10 @@ export default Ember.Controller.extend({
     } else {
       return contacts;
     }
-  })
+  }),
+  actions: {
+    updateSortBy(sortValue){
+      this.set('sortBy', sortValue);
+    }
+  }
 });
